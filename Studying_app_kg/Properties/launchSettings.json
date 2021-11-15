@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Studying_app_kg": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    },
+    "CG": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,83 @@
+﻿<Page x:Class="Studying_app_kg.Views.AffineTransformations"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Studying_app_kg"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="AffineTransformations">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="590"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="464"></ColumnDefinition>
+            <ColumnDefinition Width="816"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3" Fill ="#FFFEFFC8"></Rectangle>
+        <Rectangle Grid.Row="2" Grid.Column="0" Fill="White" Stroke="#807747" StrokeThickness="3" RadiusX="5" RadiusY="5" Width="400" Height="470" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="64,30,0,0"></Rectangle>
+        <Rectangle Grid.Row="2" Grid.Column="1" Fill="White" Stroke="#807747" StrokeThickness="3" RadiusX="5" RadiusY="5" Width="752" Height="470" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0"></Rectangle>
+        <Rectangle Grid.Column="0"  Grid.Row="0" Grid.ColumnSpan="2" Fill="#A89A85"></Rectangle>
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Content="Афінні перетворення" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" FontFamily="Arial" FontWeight="Bold" Margin="0,5,0,0"/>
+
+        <Button  Style="{StaticResource NavButton}"  Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="91,0,0,0" Click="Home_OnClick">
+            <Image Source="../Images/home.png"></Image>
+        </Button>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,0,65,0" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Style="{StaticResource NavButton}" Width="100" HorizontalAlignment="Right" Click="UserGuideButton_OnClick">
+                <Image Source="../Images/UserGuide.png"></Image>
+            </Button>
+            <Button Style="{StaticResource NavButton}" Click="InstructionsButton_OnClick">
+                <Image Source="../Images/Instructions.png"></Image>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Margin="80,57,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="368">
+            <Label Content="Вершини трикутника" FontSize="18" FontWeight="Medium"></Label>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label  FontSize="18" FontWeight="Medium" Content="Вершина А:   X:"></Label>
+                <TextBox  Style ="{StaticResource Input}" x:Name="x1" Text="-2" TextChanged="X1_OnTextChanged"></TextBox>
+                <Label  FontSize="18" FontWeight="Medium" Content="  Y:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="y1" Text="-1" TextChanged="X1_OnTextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label  FontSize="18" FontWeight="Medium" Content="Вершина B:   X:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="x2" Text="5" TextChanged="X1_OnTextChanged"></TextBox>
+                <Label  FontSize="18" FontWeight="Medium" Content="  Y:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="y2" Text="10" TextChanged="X1_OnTextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label  FontSize="18" FontWeight="Medium" Content="Вершина C:   X:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="x3" Text="12" TextChanged="X1_OnTextChanged"></TextBox>
+                <Label  FontSize="18" FontWeight="Medium" Content="  Y:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="y3" Text="1" TextChanged="X1_OnTextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label  FontSize="18" FontWeight="Medium" Content="Зміщення:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="Speed" Text="3" Margin="75,0,0,0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label  FontSize="18" FontWeight="Medium" Content="Кількість ітерацій:"></Label>
+                <TextBox  Style ="{StaticResource Input}"  x:Name="IterationsCount" Text="5" Margin="10,0,0,0"></TextBox>
+            </StackPanel>
+            <Button Content="Скинути масштабування" x:Name="Reset" Click="Reset_OnClick" Style="{StaticResource ScaleButton}" HorizontalAlignment="Left" Margin =" 0,10,0,0" Width="165"></Button>
+            <!--<Label Content="Масштабування" FontSize="18" FontWeight="Medium" Margin="0, 30,0,0"></Label>
+            <StackPanel Orientation="Horizontal " HorizontalAlignment="Center">
+                <Button Content="+" Style="{StaticResource NavButton}"></Button>
+                <Button Content="-" Style="{StaticResource NavButton}"></Button>
+            </StackPanel>-->
+
+            <Button Style="{StaticResource ControlButton}" Background="#A89A85" HorizontalAlignment="Center" x:Name="Paint" Content="Розпочати симуляцію" Margin="0,10,0,10" Click="Paint_OnClick"></Button>
+            <Button Style="{StaticResource ControlButton}" Background="#A89A85" Content="Зберегти зображення" HorizontalAlignment="Center" x:Name="SaveButton" Click="SaveButton_OnClick"></Button>
+        </StackPanel>
+        <oxy:PlotView Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" Height="400" Margin="168,65,0,0" x:Name="AffineImage" Background="#FAEC8E"></oxy:PlotView>
+        <Label Grid.Row="2" Grid.Column="1" Content="Маcштаб: " x:Name="ScaleLabel" FontSize="18" FontWeight="Bold" Margin="5,0,0,80" Width="150" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,248,90" Content="Для масштабування використовуйте колесо миші над зображенням" Width="384"></Label>
+    </Grid>
+</Page>
