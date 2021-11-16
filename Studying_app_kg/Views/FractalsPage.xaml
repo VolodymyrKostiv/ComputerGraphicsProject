@@ -3,147 +3,79 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:local="clr-namespace:Studying_app_kg"
       mc:Ignorable="d"
-      Title="FractalsPage" Height="720" Width="1280">
+      Title="FractalsPage" Height="1024" Width="1440">
 
-    <Grid RenderTransformOrigin="0.5,0.5" Margin="10,26,24,32">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.068"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"></RowDefinition>
-            <RowDefinition Height="70"></RowDefinition>
-            <RowDefinition Height="41"></RowDefinition>
-            <RowDefinition Height="429"/>
-            <RowDefinition Height="120"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="411"></ColumnDefinition>
-            <ColumnDefinition Width="599"/>
-            <ColumnDefinition Width="272"/>
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="9,-6,0,0"/>
 
-        <Rectangle Grid.ColumnSpan="3" Grid.RowSpan="5" Fill ="#FEFFC8" Margin="3,-7,29,59" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.001"/>
-                    <RotateTransform Angle="-0.018"/>
-                    <TranslateTransform Y="-0.009"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Grid.Row="1" Fill="#FFFFFF" Stroke="#807747" StrokeThickness="3" RadiusX="66.371" RadiusY="66.371" Height="537" VerticalAlignment="Top" Margin="39,19,16,0" Grid.RowSpan="4"/>
-        <Rectangle Grid.Row="1" Fill="#FFFFFF" Stroke="#807747" StrokeThickness="3" RadiusX="61.508" RadiusY="61.508" Margin="7,18,91,59" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="3"/>
-        <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" FontFamily="Arial" FontWeight="Bold" Foreground="#FF49C593" Height="70" Width="490" Grid.Column="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <TextBlock HorizontalAlignment="Left" Width="351" Height="60" VerticalAlignment="Top" Margin="128,3,0,0">Fractal z sin(z)</TextBlock>
-                <Image Source="../Images/Fractal.png" Margin="-87,0,303,0" Height="48" VerticalAlignment="Center" />
-            </Grid>
-        </Label>
+        <Label Content="Koch curve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,180,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFFFA726" FontFamily="Lato" FontSize="50" Width="308" Height="62" />
 
+        <Rectangle Fill="#FFFFE89B" Stroke="Black" StrokeThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" RadiusX="15" RadiusY="15" Width="378" Height="485" Margin="28,286,0,0"/>
+        <Rectangle Fill="#FFFFFF" Stroke="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Width="949" Height="698" Margin="438,137,0,0"/>
+        <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Height="80" Margin="46,319,0,0"/>
 
-        <!-- Check buttons -->
-        <!-- Plazma -->
-        
-        <!--<Image Grid.Column="1" Grid.Row="1" Margin="40,43,124,0" x:Name="FractalsImage" Grid.ColumnSpan="2" Height="419" VerticalAlignment="Top" Grid.RowSpan="3"/>-->
-        <Canvas Name="fractalCanvas"  Width="610" Height="425">
-        </Canvas>
+        <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Height="80" Margin="46,319,0,0"/>
+        <Label Content=" Segments &#xD;&#xA;relationship" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,319,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="211" Height="80" />
+        <ComboBox Name="FirstPartOfRelation" FontFamily="Lato" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Width="55" Height="54" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,332,0,0" SelectionChanged="FirstPartOfRelation_SelectionChanged">
+            <TextBlock>1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+            <TextBlock>4</TextBlock>
+            <TextBlock>5</TextBlock>
+            <TextBlock>6</TextBlock>
+            <TextBlock>7</TextBlock>
+        </ComboBox>
+        <ComboBox Name="SecondPartOfRelation" FontFamily="Lato" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Width="55" Height="54" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,332,0,0" SelectionChanged="SecondPartOfRelation_SelectionChanged">
+            <TextBlock>1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+            <TextBlock>4</TextBlock>
+            <TextBlock>5</TextBlock>
+            <TextBlock>6</TextBlock>
+            <TextBlock>7</TextBlock>
+        </ComboBox>
 
-        <!--Brounian move -->
-        <Label x:Name="Brounian3" Grid.Column="0" Grid.Row="3" Content="Початкова точка:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="91,101,0,0" FontSize="20" Visibility="Hidden" Height="37" Width="169"/>
-        <Label x:Name="Brounian2" Grid.Column="0" Grid.Row="3" Content="X " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="91,131,0,0" FontSize="20"  Visibility="Hidden" Height="37" Width="27"/>
-        <Label x:Name="Brounian1" Grid.Column="0" Grid.Row="3" Content="Y " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="250,131,0,0" FontSize="20"  Visibility="Hidden" Height="37" Width="27"/>
-        <Label x:Name="Brounian5" Grid.Row="3" Content="Кількість ітерацій: " VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,175,0,0" FontSize="20"  Visibility="Hidden" Height="37" Width="178"/>
+        <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Height="2" Margin="28,431,0,0"/>
 
-        <TextBox x:Name="xPos" Grid.Column="0" Grid.Row="3" Style="{StaticResource Input}" Text="50"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="91,135,0,0" Visibility="Hidden" Height="30" Width="80"/>
-        <TextBox x:Name="yPos" Grid.Column="0" Grid.Row="3" Style="{StaticResource Input}" Text="50"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="280,135,0,0" Visibility="Hidden" Height="30" Width="80"/>
-        <TextBox x:Name="IterationsCount" Grid.Column="0" Grid.Row="3" Style="{StaticResource Input}" Text="100"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="280,180,0,0" Visibility="Hidden" Height="30" Width="80"/>
-        <Label Grid.Column="0" x:Name="Brounian4" Grid.Row="3" Content="Швидкість:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="91,225,0,0" FontSize="20" Visibility="Hidden" Height="37" Width="109"/>
-        <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource Input}" Text="30" x:Name="Speed" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="280,230,0,0" FontSize="20" Visibility="Hidden" Height="30" Width="80"/>
-        <!-- Buttons -->
-        <Button Grid.Row="3" Style="{StaticResource UserDataButton}" Background="#49C593" Margin="80,334,62,38" Click="ButtonBase_OnClick" x:Name="Simulate" Content="         Build                  " FontFamily="Comic Sans MS" FontSize="24" BorderBrush="White" Height="Auto" Width="Auto"/>
-        <Button Grid.Column="1" Grid.Row="3" Style="{StaticResource UserDataButton}" Background="#FEDAAB" Margin="257,383,63,106" Click="ButtonSave_OnClick" FontFamily="Comic Sans MS" FontSize="22" Width="Auto" Height="Auto" Grid.RowSpan="2">
-            <Grid Height="51">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="1" Content="Download" Margin="38,8,-36,8" />
-                <Image Grid.Column="1" Source="../Images/download.png" Margin="190,16,-113,14" />
-            </Grid>
-        </Button>
+        <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Height="57" Margin="46,455,0,0"/>
+        <Label Content="Basic figure" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,455,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="179" Height="57" />
+        <ComboBox Name="BasicFigure" FontFamily="Lato" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Width="105" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,466,0,0" SelectionChanged="BasicFigure_SelectionChanged">
+            <TextBlock>Triangle</TextBlock>
+            <TextBlock>Square</TextBlock>
+        </ComboBox>
 
-        <Button x:Name="Home" Click="Home_OnClick" Grid.Column="0" Style="{StaticResource MainPage}" HorizontalAlignment="Left" Margin="52,-68,0,0" Grid.RowSpan="2" Height="175" Width="24" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Template>
-                <ControlTemplate>
-                    <Border CornerRadius="30" Background="#49C593" Margin="-13,74,-18,50">
-                        <Image Source="../Images/home.png" OpacityMask="Black" Height="34" Width="34"></Image>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Height="2" Margin="28,539,0,0"/>
 
-        <StackPanel Grid.Column="2" Grid.Row="0" Margin="204,0,0,0" HorizontalAlignment="Left" Orientation="Horizontal" Width="50"/>
-        <Button x:Name="UserGuide" Click="UserGuideButton_OnClick" Grid.Column="2" Style="{StaticResource MainPage}" HorizontalAlignment="Left" Margin="137,311,0,51" Height="Auto" Width="33" RenderTransformOrigin="0.5,0.5" Grid.Row="3" Grid.RowSpan="2">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.205"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Template>
-                <ControlTemplate>
-                    <Border CornerRadius="30" Background="#49C593" Margin="-13,74,-18,50">
-                        <Image Source="../Images/UserGuide.png" OpacityMask="Black" Margin="-3,-4,-2,-6"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Height="80" Margin="46,559,0,0"/>
+        <Label Content="Number of &#xD;&#xA; iterations" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,559,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="211" Height="80" />
+        <ComboBox Name="NumberOfIterations" FontFamily="Lato" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Width="56" Height="54" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,572,0,0" SelectionChanged="NumberOfIteraions_SelectionChanged">
+            <TextBlock>0</TextBlock>
+            <TextBlock>1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+            <TextBlock>4</TextBlock>
+            <TextBlock>5</TextBlock>
+            <TextBlock>6</TextBlock>
+        </ComboBox>
 
-        <Button x:Name="Question" Click="InstructionsButton_OnClick" Grid.Column="2" Style="{StaticResource MainPage}" HorizontalAlignment="Left" Margin="147,-69,0,0" Grid.RowSpan="2" Height="180" Width="28" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Template>
-                <ControlTemplate>
-                    <Border CornerRadius="30" Background="#49C593" Margin="-13,74,-18,50">
-                        <Image Source="../Images/Instructions.png" OpacityMask="Black" Margin="1,2,2,-1"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Height="2" Margin="28,660,0,0"/>
+        <Label Content=":" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,321,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="18" Height="80" />
 
-        <Rectangle HorizontalAlignment="Left" Height="119" Margin="76,139,0,0" Grid.Row="3" Stroke="Black" VerticalAlignment="Top" Width="277" RadiusX="27.966" RadiusY="27.966" Fill="#F8f8f8"/>
-        
-        <Label Content="Scaling:" Margin="95,158,0,0" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="241" FontSize="20" FontFamily="Comic Sans MS" Height="38"/>
-        <Rectangle Height="115" Margin="74,12,64,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" RadiusX="23.843" RadiusY="23.843" Fill="#F8f8f8" Grid.RowSpan="2"/>
-        <Label Content="Color scheme:" Margin="90,23,0,0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="241" FontSize="20" FontFamily="Comic Sans MS" Grid.RowSpan="2" Height="38"/>
-       
+        <Canvas Name="fractalCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="949" Height="698" Margin="438,137,0,0" />
+
+        <Button Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,688,0,0" Click="ButtonBase_OnClick" x:Name="Simulate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Start" FontFamily="Lato" FontSize="48" Height="67" Width="198"/>
+
+        <Button  Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="768,847,0,0" Click="ButtonSave_OnClick" FontFamily="Lato" Width="290" Height="102" />
+        <Label Content="Download" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,871,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="192" Height="53" />
+        <Image Source="../Images/download.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="985,871,0,0" />
+
+        <Button x:Name="Home" Click="Home_OnClick" Foreground="#FFC77800" Background="#FFFFE89B" HorizontalAlignment="Left" Margin="78,42,0,0" Height="9" Width="46" VerticalAlignment="Top" />
+        <Image Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="72,20,0,0" />
+        <Label Content="Fractal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="192" Height="63" />
+        <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="72" Width="72" Margin="322,18,0,0" />
+
     </Grid>
 </Page>

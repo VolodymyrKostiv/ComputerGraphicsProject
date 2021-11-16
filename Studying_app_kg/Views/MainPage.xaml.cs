@@ -36,5 +36,10 @@ namespace Studying_app_kg.Views
         {
             NavigationService?.Navigate(new UserGuidePage());
         }
+
+        private void AffineTransformations_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

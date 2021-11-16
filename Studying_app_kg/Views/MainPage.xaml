@@ -5,140 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Studying_app_kg"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="1024" d:DesignWidth="1440"
       Title="MainPage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"></RowDefinition>
-            <RowDefinition Height="281"></RowDefinition>
-            <RowDefinition Height="188.043"></RowDefinition>
-            <RowDefinition Height="190.957"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="707"></ColumnDefinition>
-            <ColumnDefinition Width="232"></ColumnDefinition>
-            <ColumnDefinition Width="222*"/>
-            <ColumnDefinition Width="119*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Grid.RowSpan="4" Fill ="#FFFEFFC8" Margin="0,-10,0,10" HorizontalAlignment="Left" Width="1280" Grid.ColumnSpan="4"/>
-        <Label Content="Choose the topic to discover" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="36" FontFamily="Comic Sans MS" FontWeight="Bold" Margin="424,22,0,0" Height="64" Width="515" Grid.ColumnSpan="2" Foreground="#FFB2B2B2" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024"/>
+        <Label Content="Welcome to CG!" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="96" FontFamily="Lato" Margin="404,226,0,0" Height="128" Width="759" Foreground="#FFFFA726"/>
+        <Label Content="Build a fractal, discover color scheme or move figure" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Lato" Margin="160,369,0,0" Height="86" Width="1125" Foreground="#FFFFA726"/>
+        <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="230" Width="230" Margin="177,124,0,0" />
 
+        <Button x:Name="FractalsChapter" Click="FractalsChapter_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Background="#FFA726" />
+        <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0" />
+        <Label Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
-        <Button x:Name="FractalsChapter" Click="FractalsChapter_OnClick" Grid.Row="1" Style="{StaticResource UserDataButton}" VerticalAlignment="Top" Height="144" Width="676" Margin="354,44,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Background="#FF49C593" HorizontalAlignment="Left">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-360"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="420" RenderTransformOrigin="0.5,0.5">
-                <StackPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-90.244"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </StackPanel.RenderTransform>
-                <TextBlock x:Name="FractalsInfo" TextAlignment="Justify" FontWeight="Regular" FontSize="14" TextWrapping="Wrap"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="ColorSchemes" Click="ColorSchemes_OnClick" Grid.Row="1" Style="{StaticResource UserDataButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="354,216,0,0" Height="159" Width="676" Grid.RowSpan="2" Background="#FF6298E8" Grid.ColumnSpan="3">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="420">
-                <TextBlock x:Name="ColorsInfo" TextAlignment="Justify" FontWeight="Regular" FontSize="14" TextWrapping="Wrap" Margin="10,10,10,0"></TextBlock>
-            </StackPanel>
-        </Button>
-        <Button x:Name="AffineTransformations" Grid.Row="2" Style="{StaticResource UserDataButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="354,134,0,0" Height="150" Width="676" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#FFF28C53">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="420">
-                <TextBlock x:Name="AffineInfo" TextAlignment="Justify" FontWeight="Regular" FontSize="14" TextWrapping="Wrap" Margin="10,10,10,0"/>
-            </StackPanel>
-        </Button>
-        <Image Source="../Images/Fractal.png" RenderTransformOrigin="0.5,0.5" Margin="390,80,181,133" Grid.Row="1">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label Content="Fractal" HorizontalAlignment="Left" Margin="589,56,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" FontFamily="Comic Sans MS" FontSize="72" FontWeight="Bold" Width="314" Grid.ColumnSpan="2"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="64" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="51,66,0,0" RadiusX="2.252" RadiusY="2.252">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-43.782"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="65" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="50,111,0,0" RadiusX="1.845" RadiusY="1.845">
-        <Rectangle.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform ScaleX="-1"/>
-                <SkewTransform/>
-                <RotateTransform Angle="-135.733"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Rectangle.RenderTransform>
-        </Rectangle>
-        <Image Height="113" VerticalAlignment="Top" Source="../Images/color.png" Margin="402,239,192,0" Grid.RowSpan="2" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label Content="Color schemes" HorizontalAlignment="Left" Margin="548,252,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" FontFamily="Comic Sans MS" FontSize="55" FontWeight="Bold" Width="433" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="64" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="51,245,0,0" RadiusX="2.252" RadiusY="2.252" Grid.RowSpan="2">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-43.782"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="65" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="50,10,0,0" RadiusX="1.845" RadiusY="1.845">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-135.733"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Image Source="../Images/triangle.png" Margin="398,115,158,110" Grid.RowSpan="2" Grid.Row="2"/>
-        <Label Content="    Affine &#xD;&#xA;transformation" HorizontalAlignment="Left" Margin="516,125,0,0" Grid.Row="2" VerticalAlignment="Top" Foreground="White" FontFamily="Comic Sans MS" FontSize="55" FontWeight="Bold" Width="432" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="150"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="64" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="51,155,0,0" RadiusX="2.252" RadiusY="2.252" Grid.RowSpan="2">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-43.782"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="65" Grid.Row="3" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5" Margin="50,13,0,0" RadiusX="1.845" RadiusY="1.845">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-135.733"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle> 
+        <Button x:Name="ColorSchemes" Click="ColorSchemes_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Background="#FFA726" />
+        <Image Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
+        <Label Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
+
+        <Button x:Name="AffineTransformations" Click="AffineTransformations_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Background="#FFA726" />
+        <Image Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0"/>
+        <Label Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145" />
     </Grid>
 </Page>

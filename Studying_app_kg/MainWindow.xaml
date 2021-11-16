@@ -9,11 +9,6 @@
         Title="Computer Graphics" Height="1024" Width="1440"
         ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="48*"/>
-            <ColumnDefinition Width="1145*"/>
-        </Grid.ColumnDefinitions>
         <Frame x:Name="Frame" Grid.ColumnSpan="3">
         </Frame>
     </Grid>
