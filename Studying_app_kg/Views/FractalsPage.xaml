@@ -68,14 +68,14 @@
 
         <Button Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,688,0,0" Click="ButtonBase_OnClick" x:Name="Simulate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Start" FontFamily="Lato" FontSize="48" Height="67" Width="198"/>
 
-        <Button  Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="768,847,0,0" Click="ButtonSave_OnClick" FontFamily="Lato" Width="290" Height="102" />
-        <Label Content="Download" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,871,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="192" Height="53" />
-        <Image Source="../Images/download.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="985,871,0,0" />
+        <Button Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="768,847,0,0" Click="ButtonSave_OnClick" FontFamily="Lato" Width="290" Height="102" />
+        <Label MouseLeftButtonDown="ButtonSave_OnClick" Content="Download" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,871,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="192" Height="53" />
+        <Image MouseLeftButtonDown="ButtonSave_OnClick" Source="../Images/download.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="985,871,0,0" />
 
-        <Button x:Name="Home" Click="Home_OnClick" Foreground="#FFC77800" Background="#FFFFE89B" HorizontalAlignment="Left" Margin="78,42,0,0" Height="9" Width="46" VerticalAlignment="Top" />
-        <Image Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="72,20,0,0" />
-        <Label Content="Fractal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="192" Height="63" />
-        <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="72" Width="72" Margin="322,18,0,0" />
+        <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="72,40,0,0" />
+        <Label Content="Fractal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="192" Height="63" />
+        <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="72" Width="72" Margin="322,36,0,0" />
 
+        <Image MouseLeftButtonDown="FractalsGuide_OnClick" Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="1002,0,0,0" />
     </Grid>
 </Page>

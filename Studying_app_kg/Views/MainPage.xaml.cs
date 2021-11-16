@@ -19,22 +19,12 @@ namespace Studying_app_kg.Views
 
         private void ColorSchemes_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new ColorSchemes());
+            //NavigationService?.Navigate(new ColorSchemes());
         }
 
         private void AffineTransformations_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new AffineTransformations());
-        }
-
-        private void InstructionsChapter_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Instructions());
-        }
-
-        private void UserGuideButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new UserGuidePage());
+            //NavigationService?.Navigate(new AffineTransformations());
         }
 
         private void AffineTransformations_Click(object sender, RoutedEventArgs e)

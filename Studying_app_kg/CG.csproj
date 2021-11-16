@@ -19,15 +19,16 @@
   <ItemGroup>
     <None Remove="Images\cmyk.png" />
     <None Remove="Images\color.png" />
+    <None Remove="Images\computer.png" />
     <None Remove="Images\download.png" />
     <None Remove="Images\Fractal.png" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Instructions.png" />
+    <None Remove="Images\left-arrow.png" />
     <None Remove="Images\photograph-icon-17.jpg" />
     <None Remove="Images\share.png" />
     <None Remove="Images\triangle.png" />
     <None Remove="Images\upload.png" />
-    <None Remove="Images\UserGuide.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +45,9 @@
     <Resource Include="Images\color.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\computer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\download.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -56,6 +60,7 @@
     <Resource Include="Images\Instructions.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\left-arrow.png" />
     <Resource Include="Images\photograph-icon-17.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -66,9 +71,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\upload.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\UserGuide.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

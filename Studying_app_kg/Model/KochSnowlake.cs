@@ -71,7 +71,7 @@ namespace Studying_app_kg.Model
             else if (figure == 1)
             {
                 int padding = scope == 0 ? 200 : 200 + 5 * (-scope) * numberOfIterations;
- 
+
                 double side = FractalCanvas.Height - (padding * 2);
 
                 Point a = new Point(FractalCanvas.Width / 2 - side / 2, padding);

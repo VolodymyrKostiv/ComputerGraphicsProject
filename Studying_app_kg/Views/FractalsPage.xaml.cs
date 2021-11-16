@@ -6,6 +6,7 @@ using System.Windows.Media.Imaging;
 using System.Drawing;
 using Microsoft.Win32;
 using Studying_app_kg.Model;
+using CG.Views;
 
 namespace Studying_app_kg.Views
 {
@@ -38,6 +39,15 @@ namespace Studying_app_kg.Views
                 MessageBox.Show("Invalid data\n "+ex.Message, "Study part", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        private void Home_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new MainPage());
+        }
+
+        private void FractalsGuide_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new FractalGuide());
+        }
 
         private void ButtonSave_OnClick(object sender, RoutedEventArgs e)
         {
@@ -62,22 +72,6 @@ namespace Studying_app_kg.Views
                 }
             }
         }
-
-        private void Home_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new MainPage());
-        }
-
-        private void UserGuideButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new UserGuidePage(2));
-        }
-
-        private void InstructionsButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Instructions(2));
-        }
-
         private void ScrollBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
@@ -104,6 +98,11 @@ namespace Studying_app_kg.Views
         }
 
         private void SecondPartOfRelation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
 
         }

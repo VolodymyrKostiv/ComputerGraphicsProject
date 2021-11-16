@@ -15,8 +15,8 @@
         <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="230" Width="230" Margin="177,124,0,0" />
 
         <Button x:Name="FractalsChapter" Click="FractalsChapter_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Background="#FFA726" />
-        <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0" />
-        <Label Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
+        <Image MouseLeftButtonDown="FractalsChapter_OnClick" Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0" />
+        <Label MouseLeftButtonDown="FractalsChapter_OnClick" Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
         <Button x:Name="ColorSchemes" Click="ColorSchemes_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Background="#FFA726" />
         <Image Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
