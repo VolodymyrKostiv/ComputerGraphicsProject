@@ -1,12 +1,11 @@
-﻿using System;
+﻿using CG.Views;
+using Microsoft.Win32;
+using Studying_app_kg.Model;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using System.Drawing;
-using Microsoft.Win32;
-using Studying_app_kg.Model;
-using CG.Views;
 
 namespace Studying_app_kg.Views
 {
@@ -36,7 +35,7 @@ namespace Studying_app_kg.Views
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                MessageBox.Show("Invalid data\n "+ex.Message, "Study part", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid data\n "+ex.Message, "Input data error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void Home_OnClick(object sender, RoutedEventArgs e)

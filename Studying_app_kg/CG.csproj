@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <None Remove="Images\cmyk.png" />
+    <None Remove="Images\CochCurve.jpg" />
     <None Remove="Images\color.png" />
     <None Remove="Images\computer.png" />
     <None Remove="Images\download.png" />
@@ -40,6 +41,9 @@
 
   <ItemGroup>
     <Resource Include="Images\cmyk.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CochCurve.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\color.png">

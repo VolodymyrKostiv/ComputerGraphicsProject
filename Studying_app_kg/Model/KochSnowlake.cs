@@ -11,7 +11,6 @@ namespace Studying_app_kg.Model
     {
         public List<Segment> Segments;
         public Canvas FractalCanvas;
-        public Polyline KochPolyline = new Polyline();
 
         public KochSnowflake(Canvas fractalCanvas)
         {
@@ -20,32 +19,29 @@ namespace Studying_app_kg.Model
 
         public void RunGeometricKochSnowflake(int numberOfIterations, int firstRelNum, int secondRelNum, int figure)
         {
-            InitKochSnowflake(numberOfIterations, figure, firstRelNum - secondRelNum);
+            InitializeKochSnowflake(numberOfIterations, figure, firstRelNum - secondRelNum);
             for (int i = 0; i < numberOfIterations; ++i)
             {
-                List<Segment> nextGeneration = new List<Segment>();
+                List<Segment> nextGenerationSegments = new List<Segment>();
 
-                foreach (var segment in Segments)
+                foreach (Segment segment in Segments)
                 {
-                    Segment[] children = segment.generate(firstRelNum, secondRelNum, figure);
-                    nextGeneration.AddRange(children);
+                    Segment[] childSegments = segment.Generate(firstRelNum, secondRelNum, figure);
+                    nextGenerationSegments.AddRange(childSegments);
                 }
 
-                Segments = nextGeneration;
+                Segments = nextGenerationSegments;
             }
 
-            foreach (var segment in Segments)
-            {
+            foreach (Segment segment in Segments)
                 Show(segment.a, segment.b);
-            }
+
         }
 
-        private void InitKochSnowflake(int numberOfIterations, int figure, int scope)
+        private void InitializeKochSnowflake(int numberOfIterations, int figure, int scope)
         {
             FractalCanvas.Children.Clear();
             Segments = new List<Segment>();
-
-            KochPolyline.Stroke = Brushes.Blue;
 
             if (figure == 0)
             {
@@ -70,7 +66,15 @@ namespace Studying_app_kg.Model
             }
             else if (figure == 1)
             {
-                int padding = scope == 0 ? 200 : 200 + 5 * (-scope) * numberOfIterations;
+                int padding = 0;
+                if (scope <= 3 && scope > 0)
+                    padding = 200;
+                else if (scope >= 3)
+                    padding = 200;
+                else if (scope < 0 && scope > -2)
+                    padding = 250;
+                else if (scope <= -2)
+                    padding = 300;
 
                 double side = FractalCanvas.Height - (padding * 2);
 
@@ -94,7 +98,7 @@ namespace Studying_app_kg.Model
 
         public void Show(Point a, Point b)
         {
-            var line = new Line();
+            Line line = new Line();
             line.Stroke = Brushes.Black;
 
             line.X1 = a.X;
@@ -119,7 +123,7 @@ namespace Studying_app_kg.Model
             b = _b;
         }
 
-        public Segment[] generate(int first, int second, int figure)
+        public Segment[] Generate(int first, int second, int figure)
         {
             if (figure == 0)
             {
@@ -128,21 +132,21 @@ namespace Studying_app_kg.Model
                 Vector v = Point.Subtract(b, a);
                 v = Vector.Divide(v, 2 * first + second);
 
-                // Segment 0
+                // Segment 1
                 Point b1 = Point.Add(a, first * v);
                 children[0] = new Segment(a, b1);
 
-                // Segment 3
+                // Segment 4
                 Point a1 = Point.Subtract(b, first * v);
                 children[3] = new Segment(a1, b);
 
                 v = RotateRadians(v, -Math.PI / 3);
                 Point c = Point.Add(b1, second * v);
 
-                // Segment 1
+                // Segment 2
                 children[1] = new Segment(b1, c);
 
-                // Segment 2
+                // Segment 3
                 children[2] = new Segment(c, a1);
 
                 return children;
@@ -154,23 +158,26 @@ namespace Studying_app_kg.Model
                 Vector v = Point.Subtract(b, a);
                 v = Vector.Divide(v, 2 * first + second);
 
-                // Segment 0
+                // Segment 1
                 Point b1 = Point.Add(a, first * v);
                 children[0] = new Segment(a, b1);
 
-                // Segment 3
+                // Segment 5
                 Point a1 = Point.Subtract(b, first * v);
                 children[4] = new Segment(a1, b);
 
                 v = RotateRadians(v, -Math.PI / 2);
+
                 Point c1 = Point.Add(b1, second * v);
                 Point c2 = Point.Add(a1, second * v);
 
-                // Segment 1
+                // Segment 2
                 children[1] = new Segment(b1, c1);
 
-                // Segment 2
+                // Segment 4
                 children[3] = new Segment(c2, a1);
+
+                // Segment 3
                 children[2] = new Segment(c1, c2);
 
                 return children;

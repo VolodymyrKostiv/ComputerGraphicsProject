@@ -9,7 +9,7 @@
       Title="FractalGuide">
 
     <Grid>
-        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="9,-6,0,0"/>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="0,0,0,0"/>
 
         <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="53" Margin="72,40,0,0" />
         <Label Content="Fractal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="192" Height="62" />
