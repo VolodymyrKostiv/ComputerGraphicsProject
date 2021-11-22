@@ -12,17 +12,22 @@
         <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024"/>
         <Label Content="Welcome to CG!" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="96" FontFamily="Lato" Margin="404,226,0,0" Height="128" Width="759" Foreground="#FFFFA726"/>
         <Label Content="Build a fractal, discover color scheme or move figure" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Lato" Margin="160,369,0,0" Height="86" Width="1125" Foreground="#FFFFA726"/>
-        <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="230" Width="230" Margin="177,124,0,0" />
+        <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="230" Width="230" Margin="177,124,0,0">
+            <Image.ToolTip>
+                <ToolTip HorizontalOffset="150" VerticalOffset="30"  Content="Press on this icon to &#xD;&#xA;find more about &#xD;&#xA;what is happening :)" Width="252" FontFamily="Lato" FontSize="22" Height="123" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
 
-        <Button x:Name="FractalsChapter" Click="FractalsChapter_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Background="#FFA726" />
+        <Rectangle MouseLeftButtonDown="FractalsChapter_OnClick" x:Name="FractalsChapter" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Fill="#FFA726" />
         <Image MouseLeftButtonDown="FractalsChapter_OnClick" Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0" />
         <Label MouseLeftButtonDown="FractalsChapter_OnClick" Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
-        <Button x:Name="ColorSchemes" Click="ColorSchemes_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Background="#FFA726" />
-        <Image Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
-        <Label Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
+        <Rectangle MouseLeftButtonDown="ColorSchemes_OnClick" x:Name="ColorSchemes" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Fill="#FFA726" />
+        <Image MouseLeftButtonDown="ColorSchemes_OnClick" Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
+        <Label MouseLeftButtonDown="ColorSchemes_OnClick" Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
-        <Button x:Name="AffineTransformations" Click="AffineTransformations_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Background="#FFA726" />
+        <Rectangle x:Name="AffineTransformations" RadiusX="40" RadiusY="40" MouseLeftButtonDown="AffineTransformations_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Fill="#FFA726" />
         <Image Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0"/>
         <Label Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145" />
     </Grid>

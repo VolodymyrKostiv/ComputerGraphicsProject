@@ -24,12 +24,19 @@
     <None Remove="Images\download.png" />
     <None Remove="Images\Fractal.png" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\hsv.png" />
     <None Remove="Images\Instructions.png" />
     <None Remove="Images\left-arrow.png" />
     <None Remove="Images\photograph-icon-17.jpg" />
+    <None Remove="Images\rgb.png" />
     <None Remove="Images\share.png" />
     <None Remove="Images\triangle.png" />
     <None Remove="Images\upload.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\hsv.png" />
+    <Resource Include="Images\rgb.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,9 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\cmyk.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\CochCurve.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

@@ -9,7 +9,7 @@
       Title="FractalsPage" Height="1024" Width="1440">
 
     <Grid>
-        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="9,-6,0,0"/>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="0,0,0,0"/>
 
         <Label Content="Koch curve" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,180,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFFFA726" FontFamily="Lato" FontSize="50" Width="308" Height="62" />
 
@@ -26,7 +26,10 @@
             <TextBlock>4</TextBlock>
             <TextBlock>5</TextBlock>
             <TextBlock>6</TextBlock>
-            <TextBlock>7</TextBlock>
+            <ComboBox.ToolTip>
+                <ToolTip Content="First part of relation" FontFamily="Lato" FontSize="16" Width="250" Height="80" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </ComboBox.ToolTip>
         </ComboBox>
         <ComboBox Name="SecondPartOfRelation" FontFamily="Lato" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Width="55" Height="54" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,332,0,0" SelectionChanged="SecondPartOfRelation_SelectionChanged">
             <TextBlock>1</TextBlock>
@@ -35,7 +38,6 @@
             <TextBlock>4</TextBlock>
             <TextBlock>5</TextBlock>
             <TextBlock>6</TextBlock>
-            <TextBlock>7</TextBlock>
         </ComboBox>
 
         <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Height="2" Margin="28,431,0,0"/>
@@ -58,7 +60,6 @@
             <TextBlock>3</TextBlock>
             <TextBlock>4</TextBlock>
             <TextBlock>5</TextBlock>
-            <TextBlock>6</TextBlock>
         </ComboBox>
 
         <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Height="2" Margin="28,660,0,0"/>
@@ -66,16 +67,22 @@
 
         <Canvas Name="fractalCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="949" Height="698" Margin="438,137,0,0" />
 
-        <Button Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,688,0,0" Click="ButtonBase_OnClick" x:Name="Simulate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Start" FontFamily="Lato" FontSize="48" Height="67" Width="198"/>
+        <Rectangle RadiusX="30" RadiusY="30" Stroke="#FFC77800" StrokeThickness="2" Fill="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,688,0,0" MouseLeftButtonDown="ButtonBase_OnClick" x:Name="Simulate" Height="67" Width="198"/>
+        <Label MouseLeftButtonDown="ButtonBase_OnClick" Content="Start" HorizontalAlignment="Left" FontFamily="Lato" FontSize="48" VerticalAlignment="Top" Margin="118,688,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Width="198" Height="67" />
 
-        <Button Background="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="768,847,0,0" Click="ButtonSave_OnClick" FontFamily="Lato" Width="290" Height="102" />
-        <Label MouseLeftButtonDown="ButtonSave_OnClick" Content="Download" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,871,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="192" Height="53" />
+        <Rectangle RadiusX="30" RadiusY="30" Fill="#FFF6FBE7" Stroke="#FFC77800" StrokeThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="768,847,0,0" MouseLeftButtonDown="ButtonSave_OnClick" Width="290" Height="102" />
+        <Label MouseLeftButtonDown="ButtonSave_OnClick" Content="Download" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="788,871,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="40" Width="192" Height="53" />
         <Image MouseLeftButtonDown="ButtonSave_OnClick" Source="../Images/download.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="985,871,0,0" />
 
         <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="72,40,0,0" />
         <Label Content="Fractal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="192" Height="63" />
         <Image Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="72" Width="72" Margin="322,36,0,0" />
 
-        <Image MouseLeftButtonDown="FractalsGuide_OnClick" Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="1002,0,0,0" />
+        <Image MouseLeftButtonDown="FractalsGuide_OnClick" Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="1002,0,0,0">
+            <Image.ToolTip>
+                <ToolTip Content="Click here to see the&#xD;&#xA;guide about FRACTALS" Placement="Right" FontFamily="Lato" FontSize="16" Width="200" Height="60" Background="#FFFFD95B" Foreground="Black" >
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
     </Grid>
 </Page>

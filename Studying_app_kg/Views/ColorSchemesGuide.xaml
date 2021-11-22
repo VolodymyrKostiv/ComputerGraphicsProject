@@ -1,0 +1,31 @@
+﻿<Page x:Class="CG.Views.ColorSchemesGuide"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CG.Views"
+      mc:Ignorable="d" 
+      Title="ColorSchemesGuide" Height="1024" Width="1440">
+
+    <Grid>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="0,0,0,0"/>
+
+        <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="53" Margin="72,40,0,0" />
+        <Label Content="Color scheme" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="331" Height="63" />
+        <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="460,0,0,0" />
+
+        <Label Content="How to use?" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Lato" Margin="72,198,0,0" FontStyle="Italic" Height="102" Width="317" Foreground="Black"/>
+        <TextBlock TextWrapping="Wrap" Width="920" Height="128" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="433,198,0,0">To use this function you simply need to upload the image you’d like to experiment with! After that you can move your cursor on image and see the appropriate values for RGB and HSV, information about which you can read below. Finally, you can download the results.</TextBlock>
+
+        <Label Content="Color saturation - " FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Top"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Lato" Margin="88,348,0,0" Height="102" Width="313" Foreground="Black"/>
+        <TextBlock  TextWrapping="Wrap" Width="924" Height="102" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="428,368,0,0">refers to the intensity of color in an image. As the saturation increases, the colors appear to be more pure. As the saturation decreases, the colors appear to be more washed-out or pale. (<Hyperlink NavigateUri="https://www.techopedia.com/definition/1968/color-saturation">read more</Hyperlink>)</TextBlock>
+
+        <Label Content="RGB - " FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Lato" Margin="88,0,0,0" Height="50" Width="313" Foreground="Black"/>
+        <Image Source="../Images/rgb.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="144" Width="144" Margin="160,537,0,0" />
+        <TextBlock TextAlignment="Justify" TextWrapping="Wrap" Width="924" Height="222" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="428,487,0,0">RGB color is most often used for web and computer monitor color. It has three channels (red, green, and blue) to create a wide assortment of colors on screen. You are able to adjust the values for each channel to change the color of the image from 0 to 255, independent of one another. If all channels are at 0, you will get a pure black color. Similarly, if all channels are at 255, you will get an all-white color. By adjusting the red, green, and blue channels, you can create any color in the rainbow, along with grays, whites, and blacks. (<Hyperlink NavigateUri="https://uk.wikipedia.org/wiki/RGB">read more</Hyperlink>)</TextBlock>
+
+        <Label Content="HSV - " FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Lato" Margin="88,720,0,0" Height="50" Width="313" Foreground="Black"/>
+        <Image Source="../Images/hsv.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="144" Width="144" Margin="163,775,0,0" />
+        <TextBlock TextAlignment="Justify" TextWrapping="Wrap" Width="924" Height="186" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="428,745,0,0"> HSL (for hue, saturation, lightness) and HSV (for hue, saturation, value; also known as HSB, for hue, saturation, brightness) are alternative representations of the RGB color model, designed in the 1970s by computer graphics researchers to more closely align with the way human vision perceives color-making attributes. In these models, colors of each hue are arranged in a radial slice, around a central axis of neutral colors which ranges from black at the bottom to white at the top. (<Hyperlink NavigateUri="https://uk.wikipedia.org/wiki/HSV">read more</Hyperlink>)</TextBlock>
+    </Grid>
+</Page>

@@ -21,7 +21,6 @@ namespace CG.Views
         private void Home_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new FractalsPage(this));
-
         }
     }
 }
