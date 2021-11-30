@@ -24,12 +24,7 @@ namespace Studying_app_kg.Views
 
         private void AffineTransformations_OnClick(object sender, RoutedEventArgs e)
         {
-            //NavigationService?.Navigate(new AffineTransformations());
-        }
-
-        private void AffineTransformations_Click(object sender, RoutedEventArgs e)
-        {
-
+            NavigationService?.Navigate(new AffineTransformations(this));
         }
     }
 }

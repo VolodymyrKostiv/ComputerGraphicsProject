@@ -27,8 +27,8 @@
         <Image MouseLeftButtonDown="ColorSchemes_OnClick" Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
         <Label MouseLeftButtonDown="ColorSchemes_OnClick" Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
-        <Rectangle x:Name="AffineTransformations" RadiusX="40" RadiusY="40" MouseLeftButtonDown="AffineTransformations_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Fill="#FFA726" />
-        <Image Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0"/>
-        <Label Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145" />
+        <Rectangle MouseLeftButtonDown="AffineTransformations_OnClick" x:Name="AffineTransformations" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Fill="#FFA726" />
+        <Image MouseLeftButtonDown="AffineTransformations_OnClick" Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0"/>
+        <Label MouseLeftButtonDown="AffineTransformations_OnClick" Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145" />
     </Grid>
 </Page>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="CG.Views.AffineTransformationsGuide"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CG.Views"
+      mc:Ignorable="d" 
+      Height="1024" Width="1440"
+      Title="AffineTransformationsGuide">
+
+    <Grid>
+        <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024" Margin="0,0,0,0"/>
+
+        <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="53" Margin="72,40,0,0" />
+        <Label Content="Figure's movement" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="123,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="469" Height="70" />
+        <Image Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="592,0,0,0"/>
+
+        <Label Content="How to use?" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Lato" FontStyle="Italic" Foreground="Black" Width="312" Height="169" Margin="88,158,0,0"/>
+        <TextBlock TextWrapping="Wrap" Width="921" Height="168" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="430,172,0,0">To use this function you need to enter the coordinates of three of the parallelogram vertexes (A, B and C), because the last one will be calculated automatically. After that you need to enter scalling which will be used during increasing the result and choose one of four vertexes around which the parallelogram will revolve. To change the scale you can press plus and minus icons on the coordinate plane</TextBlock>
+
+        <Label Content="Parallelogram - " FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Top"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Lato" Margin="88,337,0,0" Height="65" Width="313" Foreground="Black"/>
+        <Image Source="../Images/parallelogram.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="143" Width="208" Margin="123,402,0,0" />
+        <TextBlock  TextWrapping="Wrap" Width="924" Height="181" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="430,355,0,0">in Euclidean geometry, a parallelogram is a simple (non-self-intersecting) quadrilateral with two pairs of parallel sides. The opposite or facing sides of a parallelogram are of equal length and the opposite angles of a parallelogram are of equal measure. The congruence of opposite sides and opposite angles is a direct consequence of the Euclidean parallel postulate and neither condition can be proven without appealing to the Euclidean parallel postulate or one of its equivalent formulations. (<Hyperlink NavigateUri="https://en.wikipedia.org/wiki/Parallelogram">read more</Hyperlink>)</TextBlock>
+
+        <Label Content="        Affine &#xD;&#xA;transformation -" FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Lato" Foreground="Black" Width="313" Height="386" Margin="88,566,0,0"/>
+        <TextBlock TextWrapping="Wrap" Width="924" Height="336" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Lato" Margin="427,592,0,0">(which is called ‘Figure’s movement’ in this program). In Euclidean geometry, an affine transformation, or an affinity (from the Latin, affinis, "connected with"), is a geometric transformation that preserves lines and parallelism (but not necessarily distances and angles).
+More generally, an affine transformation is an automorphism of an affine space (Euclidean spaces are specific affine spaces), that is, a function which maps an affine space onto itself while preserving both the dimension of any affine subspaces (meaning that it sends points to points, lines to lines, planes to planes, and so on) and the ratios of the lengths of parallel line segments. Consequently, sets of parallel affine subspaces remain parallel after an affine transformation. An affine transformation does not necessarily preserve angles between lines or distances between points, though it does preserve ratios of distances between points lying on a straight line. (<Hyperlink NavigateUri="https://en.wikipedia.org/wiki/Affine_transformation">read more</Hyperlink>)</TextBlock>
+
+    </Grid>
+</Page>

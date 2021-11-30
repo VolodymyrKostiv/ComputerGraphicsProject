@@ -21,13 +21,13 @@
     <None Remove="Images\CochCurve.jpg" />
     <None Remove="Images\color.png" />
     <None Remove="Images\computer.png" />
+    <None Remove="Images\def-image.png" />
     <None Remove="Images\download.png" />
     <None Remove="Images\Fractal.png" />
-    <None Remove="Images\home.png" />
     <None Remove="Images\hsv.png" />
     <None Remove="Images\Instructions.png" />
     <None Remove="Images\left-arrow.png" />
-    <None Remove="Images\photograph-icon-17.jpg" />
+    <None Remove="Images\parallelogram.png" />
     <None Remove="Images\rgb.png" />
     <None Remove="Images\share.png" />
     <None Remove="Images\triangle.png" />
@@ -35,7 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\def-image.png" />
     <Resource Include="Images\hsv.png" />
+    <Resource Include="Images\parallelogram.png" />
     <Resource Include="Images\rgb.png" />
   </ItemGroup>
 
@@ -62,16 +64,10 @@
     <Resource Include="Images\Fractal.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\home.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\Instructions.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\left-arrow.png" />
-    <Resource Include="Images\photograph-icon-17.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\share.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
