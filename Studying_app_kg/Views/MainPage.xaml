@@ -19,16 +19,64 @@
             </Image.ToolTip>
         </Image>
 
-        <Rectangle MouseLeftButtonDown="FractalsChapter_OnClick" x:Name="FractalsChapter" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Fill="#FFA726" />
-        <Image MouseLeftButtonDown="FractalsChapter_OnClick" Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0" />
-        <Label MouseLeftButtonDown="FractalsChapter_OnClick" Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
+        <Rectangle MouseLeftButtonDown="FractalsChapter_OnClick" x:Name="FractalsChapter" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,552,0,0" Height="145" Width="471" Fill="#FFA726">
+            <Rectangle.ToolTip>
+                <ToolTip Content="Click to visit fractal page" Width="200" FontFamily="Lato" FontSize="16" Height="60" Placement="Right" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Image MouseLeftButtonDown="FractalsChapter_OnClick" Source="../Images/Fractal.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="481,583,0,0">
+            <Image.ToolTip>
+                <ToolTip Content="Click to visit fractal page" Width="200" FontFamily="Lato" FontSize="16" Height="60" Placement="Right" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
+        <Label MouseLeftButtonDown="FractalsChapter_OnClick" Content="Fractal" HorizontalAlignment="Left" Margin="147,552,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145">
+            <Label.ToolTip>
+                <ToolTip Content="Click to visit fractal page" Width="200" FontFamily="Lato" FontSize="16" Height="60" Placement="Bottom" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
-        <Rectangle MouseLeftButtonDown="ColorSchemes_OnClick" x:Name="ColorSchemes" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Fill="#FFA726" />
-        <Image MouseLeftButtonDown="ColorSchemes_OnClick" Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0"  />
-        <Label MouseLeftButtonDown="ColorSchemes_OnClick" Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145"/>
 
-        <Rectangle MouseLeftButtonDown="AffineTransformations_OnClick" x:Name="AffineTransformations" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Fill="#FFA726" />
-        <Image MouseLeftButtonDown="AffineTransformations_OnClick" Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0"/>
-        <Label MouseLeftButtonDown="AffineTransformations_OnClick" Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145" />
+        <Rectangle MouseLeftButtonDown="ColorSchemes_OnClick" x:Name="ColorSchemes" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,772,0,0" Height="145" Width="471" Fill="#FFA726" >
+            <Rectangle.ToolTip>
+                <ToolTip Content="Click to visit color schemes page" Width="250" FontFamily="Lato" FontSize="16" Height="60" Placement="Right" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        
+        <Image MouseLeftButtonDown="ColorSchemes_OnClick" Source="../Images/color.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="819,796,0,0" >
+            <Image.ToolTip>
+                <ToolTip Content="Click to visit color schemes page" Width="250" FontFamily="Lato" FontSize="16" Height="60" Placement="Right" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
+
+        <Label MouseLeftButtonDown="ColorSchemes_OnClick" Content="Color schemes" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="485,772,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145">
+            <Label.ToolTip>
+                <ToolTip Content="Click to visit color schemes page" Width="250" FontFamily="Lato" FontSize="16" Height="60" Placement="Left" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
+
+        <Rectangle MouseLeftButtonDown="AffineTransformations_OnClick" x:Name="AffineTransformations" RadiusX="40" RadiusY="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="823,552,0,0" Height="145" Width="471" Fill="#FFA726">
+            <Rectangle.ToolTip>
+                <ToolTip Content="Click to visit page with affine transformations" Width="335" FontFamily="Lato" FontSize="16" Height="60" Placement="Bottom" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Rectangle.ToolTip>
+        </Rectangle>
+        <Image MouseLeftButtonDown="AffineTransformations_OnClick" Source="../Images/triangle.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="97" Width="97" Margin="1157,576,0,0">
+            <Image.ToolTip>
+                <ToolTip Content="Click to visit page with affine transformations" Width="335" FontFamily="Lato" FontSize="16" Height="60" Placement="Bottom" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
+        <Label MouseLeftButtonDown="AffineTransformations_OnClick" Content="Figure's &#xD;&#xA;movement" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="823,552,0,0" Foreground="Black" FontFamily="Lato" FontSize="48" Width="334" Height="145">
+            <Label.ToolTip>
+                <ToolTip Content="Click to visit page with affine transformations" Width="335" FontFamily="Lato" FontSize="16" Height="60" Placement="Left" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
     </Grid>
 </Page>

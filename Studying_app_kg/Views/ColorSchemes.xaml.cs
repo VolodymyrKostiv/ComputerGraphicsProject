@@ -2,7 +2,6 @@
 using Microsoft.Win32;
 using Studying_app_kg.Model;
 using System;
-using System.Drawing;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,12 +24,42 @@ namespace Studying_app_kg.Views
         byte[] pixels;
         private byte[] _RGBpixels;
         private byte[] _HSVpixels;
-        private byte[] _pixelsData;
 
         public ColorSchemes(Page page)
         {
             InitializeComponent();
             _basePage = page;
+
+            SetDefaultLabelValues();
+        }
+
+        private void SetDefaultLabelValues()
+        {
+            if (RGB_Red != null)
+            {
+                RGB_Red.Content = $"-";
+            }
+            if (RGB_Green != null)
+            {
+                RGB_Green.Content = $"-";
+            }
+            if (RGB_Blue != null)
+            {
+                RGB_Blue.Content = $"-";
+            }
+
+            if (HSV_Hue != null)
+            {
+                HSV_Hue.Content = "-";
+            }
+            if (HSV_Saturation != null)
+            {
+                HSV_Saturation.Content = "-";
+            }
+            if (HSV_Value != null)
+            {
+                HSV_Value.Content = "-";
+            }
         }
 
         private void Home_OnClick(object sender, RoutedEventArgs e)
@@ -60,6 +89,8 @@ namespace Studying_app_kg.Views
                 return;
             }
 
+            OriginLabel.Visibility = Visibility.Visible;
+            ConvertedLabel.Visibility = Visibility.Visible;
             BasicImage.Source = _basicImage;
             ChangedImage.MouseMove += ChangedImage_OnMouseMove;
             _step = _basicImage.PixelWidth * 4;
@@ -131,6 +162,13 @@ namespace Studying_app_kg.Views
                     RGB_Red.Content = $"{pixels[index + 2]}";
                     RGB_Green.Content = $"{pixels[index + 1]}";
                     RGB_Blue.Content = $"{pixels[index]}";
+
+                    Color color = Color.FromArgb(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
+                    double[] hsv = MyColorConverter.RgbToHsv(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
+
+                    HSV_Hue.Content = $"{Math.Round(hsv[0], 0)}";
+                    HSV_Saturation.Content = $"{Math.Round(hsv[1], 2)}";
+                    HSV_Value.Content = $"{Math.Round(hsv[2], 2)}";
                 }
             }
         }
@@ -150,32 +188,17 @@ namespace Studying_app_kg.Views
 
                 if (index + 4 < _size)
                 {
-                    if (HSV_RadioButton.IsChecked == true)
-                    {
-                        Color color = Color.FromArgb(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
-                        double[] hsv = MyColorConverter.RgbToHsv(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
+                    Color color = Color.FromArgb(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
+                    double[] hsv = MyColorConverter.RgbToHsv(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
 
-                        HSV_Hue.Content = $"{Math.Round(hsv[0], 0)}";
-                        HSV_Saturation.Content = $"{Math.Round(hsv[1], 2)}";
-                        HSV_Value.Content = $"{Math.Round(hsv[2], 2)}";
+                    HSV_Hue.Content = $"{Math.Round(hsv[0], 0)}";
+                    HSV_Saturation.Content = $"{Math.Round(hsv[1], 2)}";
+                    HSV_Value.Content = $"{Math.Round(hsv[2], 2)}";
 
-                        RGB_Red.Content = $"-";
-                        RGB_Green.Content = $"-";
-                        RGB_Blue.Content = $"-";
-                    }
-                    else if (RGB_RadioButton.IsChecked == true)
-                    {
-                        Color color = Color.FromArgb(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
-                        double[] hsv = MyColorConverter.RgbToHsv(_HSVpixels[index + 2], _HSVpixels[index + 1], _HSVpixels[index]);
+                    RGB_Red.Content = $"{_HSVpixels[index + 2]}";
+                    RGB_Green.Content = $"{_HSVpixels[index + 1]}";
+                    RGB_Blue.Content = $"{_HSVpixels[index]}";
 
-                        HSV_Hue.Content = $"-";
-                        HSV_Saturation.Content = $"-";
-                        HSV_Value.Content = $"-";
-
-                        RGB_Red.Content = $"{_HSVpixels[index + 2]}";
-                        RGB_Green.Content = $"{_HSVpixels[index + 1]}";
-                        RGB_Blue.Content = $"{_HSVpixels[index]}";
-                    }
                 }
             }
         }

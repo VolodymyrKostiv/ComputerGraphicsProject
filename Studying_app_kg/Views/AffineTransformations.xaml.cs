@@ -26,8 +26,6 @@ namespace Studying_app_kg.Views
         private CancellationTokenSource token;
         private bool buttonStopWasClicked = false;
 
-        //private int _x_4, _y_4;
-
         public AffineTransformations(Page page)
         {
             InitializeComponent();
@@ -44,6 +42,7 @@ namespace Studying_app_kg.Views
             token = new CancellationTokenSource();
             Task.Run(() => PaintFunction(token.Token), token.Token);
         }
+
         private void Stop_OnClick(object sender, RoutedEventArgs e)
         {
             buttonStopWasClicked = !buttonStopWasClicked;
@@ -68,16 +67,19 @@ namespace Studying_app_kg.Views
 
                 double scale = Double.Parse(y_1.Dispatcher.Invoke(() => { return Scale.Text; }));
 
-                if (scale == 0)
+                if (scale < 0)
                 {
-                    MessageBox.Show("Scale coefficient can not be 0. Please try again \n", "Input Error",
+                    MessageBox.Show("Please enter positive integer coefficient. Try again \n", "Input Error",
                     MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
-                else if (scale < 0)
+                else if (x1 == x3 && y1 == y3 || x2 == x4 && y2 == y4 ||
+                         x1 == x2 && y1 == y2 || x3 == x4 && y3 == y4 ||
+                         x1 == x4 && y1 == y4 || x2 == x3 && y2 == y3 || 
+                         x1 == x2 && x2 == x3 ||  y1 == y2 && y2 == y3)
                 {
-                    MessageBox.Show("Please enter positive coefficient. Try again \n", "Input Error",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("You entered coordinates for a line, not a parallelogram.\nTry to change same coordinates\n", "Input Warning",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
                 #endregion
@@ -114,15 +116,18 @@ namespace Studying_app_kg.Views
                     Thread.Sleep(paintTimeout);
                 }
             }
-            catch (OperationCanceledException e)
+            catch (FormatException ex)
             {
-                return;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Uncorrect input data. Try again \n" + e.Message, "Input Error",
+                MessageBox.Show("Uncorrect input data. Only numbers allowed \n", "Input Error",
                     MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+            }
+            catch (OperationCanceledException ex)
+            {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Uncorrect input data. Try again \n" + ex.Message, "Input Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -218,20 +223,16 @@ namespace Studying_app_kg.Views
                     int y2 = Int32.Parse(y_2.Text);
                     int x3 = Int32.Parse(x_3.Text);
                     int y3 = Int32.Parse(y_3.Text);
-                    //int x4 = Int32.Parse(x_4.Text);
-                    //int y4 = Int32.Parse(y_4.Text);
 
                     double[,] vertex_A = { { x1 }, { y1 }, { 1 } };
                     double[,] vertex_B = { { x2 }, { y2 }, { 1 } };
                     double[,] vertex_C = { { x3 }, { y3 }, { 1 } };
-                    //double[,] vertex_D = { { x4 }, { y4 }, { 1 } };
 
                     double[,] points =
                     {
                               { vertex_A[0, 0], vertex_A[1, 0] },
                               { vertex_B[0, 0], vertex_B[1, 0] },
                               { vertex_C[0, 0], vertex_C[1, 0] },
-                              //{ vertex_D[0, 0], vertex_D[1, 0] }
                     };
 
                     double[,] vertex_D = CalculateFourthParallelogramVertex(points);
@@ -267,15 +268,11 @@ namespace Studying_app_kg.Views
 
             double[,] vertex_D = { { vertex_D_x }, { vertex_D_y }, { 1 } };
 
-            //_x_4 = vertex_D_x > 0 ? (int)vertex_D_x : -(int)vertex_D_x;
-            //_y_4 = vertex_D_y > 0 ? (int)vertex_D_y : -(int)vertex_D_y;
-
             return vertex_D;
         }
 
         private void PaintParallelogram(double[,] points)
         {
-            //const int lineBorders = 1000;
             if (AffineImage != null)
             {
                 DataPoint A = new DataPoint(points[0, 0], points[0, 1]);
@@ -290,13 +287,8 @@ namespace Studying_app_kg.Views
                 paralellogram.Points.Add(D);
                 paralellogram.Points.Add(A);
 
-                //LineSeries line = new LineSeries();
-                //line.Points.Add(new DataPoint(-lineBorders, -lineBorders));
-                //line.Points.Add(new DataPoint( lineBorders,  lineBorders));
-
                 PlotModel plotModel = SetPlot();
                 plotModel.Series.Add(paralellogram);
-                //plotModel.Series.Add(line);
 
                 double scale = plotModel.Axes[0].Scale;
 

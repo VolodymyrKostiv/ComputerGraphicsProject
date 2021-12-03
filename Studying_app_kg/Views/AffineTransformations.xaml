@@ -19,39 +19,70 @@
 
         <Image MouseLeftButtonDown="AffineTransformationGuide_OnClick" Source="../Images/computer.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="138" Width="134" Margin="1002,0,0,0">
             <Image.ToolTip>
-                <ToolTip Content="Click here to see the&#xD;&#xA;guide about AFFINE TRANSFORMATION" Placement="Right" FontFamily="Lato" FontSize="16" Width="200" Height="60" Background="#FFFFD95B" Foreground="Black" >
+                <ToolTip Content="Click here to see&#xD;&#xA;the guide about&#xD;&#xA;AFFINE TRANSFORMATIONS" Placement="Right" FontFamily="Lato" FontSize="16" Width="220" Height="80" Background="#FFFFD95B" Foreground="Black" >
                 </ToolTip>
             </Image.ToolTip>
         </Image>
 
-        <Label Content="Parallelogram" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,137,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="50" Width="308" Height="68" />
+        <Label Content="Parallelogram" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,137,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFFFA726" FontFamily="Lato" FontSize="44" Width="308" Height="68" />
         <Rectangle RadiusX="15" RadiusY="15"  Stroke="Black" StrokeThickness="1" Fill="#FFFFE89B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="308" Height="678" Margin="81,217,0,0"/>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="57" Margin="95,300,0,0"/>
-        <Label Content="A:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,300,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57" />
+        <Label Content="A:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,300,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57">
+            <Label.ToolTip>
+                <ToolTip Content="First vertex" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="57" Margin="94,370,0,0"/>
-        <Label Content="B:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,370,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57" />
+        <Label Content="B:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,370,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57">
+            <Label.ToolTip>
+                <ToolTip Content="Second vertex" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="57" Margin="94,440,0,0"/>
-        <Label Content="C:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,440,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57" />
+        <Label Content="C:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,440,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57">
+            <Label.ToolTip>
+                <ToolTip Content="Third vertex" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="57" Margin="94,510,0,0"/>
-        <Label Content="D:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,510,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57" />
+        <Label Content="D:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,510,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="40" Width="57" Height="57">
+            <Label.ToolTip>
+                <ToolTip Content="Fourth vertex, it's value will be set automatically" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
         <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="308" Height="2" Margin="81,600,0,0"/>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" Height="52" Margin="98,628,0,0"/>
-        <Label Content="Scalling:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98,628,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="137" Height="52" />
+        <Label Content="Scalling:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98,628,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="137" Height="52">
+            <Label.ToolTip>
+                <ToolTip Content="Figure's will become smaller on this&#xD;&#xA;coefficient after one full rotation" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
+
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="137" Height="52" Margin="98,692,0,0"/>
-        <Label Content="Vertex:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98,692,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="137" Height="57" />
+        <Label Content="Vertex:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98,692,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Lato" FontSize="28" Width="137" Height="57">
+            <Label.ToolTip>
+                <ToolTip Content="Figure's vertex, around&#xD;&#xA;which it will rotate&#xD;&#xA;By default it's coordinate origin" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </Label.ToolTip>
+        </Label>
 
         <Rectangle Fill="#C77800" HorizontalAlignment="Left" VerticalAlignment="Top" Width="308" Height="2" Margin="82,772,0,0"/>
 
         <Rectangle MouseLeftButtonDown="Stop_OnClick" RadiusX="30" RadiusY="30" Stroke="#FFFFA726" StrokeThickness="2" Fill="#FFF9FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,804,0,0" Height="67" Width="138"/>
         <Label MouseLeftButtonDown="Stop_OnClick" Content="Stop" HorizontalAlignment="Left" FontFamily="Lato" FontSize="40" VerticalAlignment="Top" Margin="95,804,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFFFA726" Width="138" Height="67" />
-        
+
         <Rectangle MouseLeftButtonDown="Paint_OnClick" RadiusX="30" RadiusY="30" Stroke="#FFC77800" StrokeThickness="2" Fill="#FFFFA726" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="239,804,0,0" Height="67" Width="138"/>
         <Label MouseLeftButtonDown="Paint_OnClick" Content="Start" HorizontalAlignment="Left" FontFamily="Lato" FontSize="40" VerticalAlignment="Top" Margin="239,804,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Width="138" Height="67" />
 
@@ -60,6 +91,10 @@
             <TextBlock>B</TextBlock>
             <TextBlock>C</TextBlock>
             <TextBlock>D</TextBlock>
+            <ComboBox.ToolTip>
+                <ToolTip Content="Use this combobox to&#xD;&#xA;choose the vertex" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </ComboBox.ToolTip>
         </ComboBox>
 
         <Rectangle Fill="#FFFFFF" RadiusX="25" RadiusY="25" Stroke="#FFC77800" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="57" Margin="188,230,0,0"/>
@@ -78,9 +113,15 @@
         <TextBox Name="y_3" TextChanged="TextBox_OnTextChanged" BorderBrush="#C77800" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Text="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="275,449,0,0" Foreground="Black" FontFamily="Lato" FontSize="40" Width="100" Height="42" />
 
         <TextBox IsEnabled="False" Name="x_4" TextChanged="TextBox_OnTextChanged" BorderBrush="#C77800" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Text="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="167,519,0,0" Foreground="Black" FontFamily="Lato" FontSize="40" Width="100" Height="42" />
+
         <TextBox IsEnabled="False" Name="y_4" TextChanged="TextBox_OnTextChanged" BorderBrush="#C77800" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Text="-1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="275,519,0,0" Foreground="Black" FontFamily="Lato" FontSize="40" Width="100" Height="42" />
 
-        <TextBox x:Name="Scale" BorderBrush="#C77800" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1,0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,632,0,0" Foreground="Black" FontFamily="Lato" FontSize="40" Width="129" Height="42" />
+        <TextBox x:Name="Scale" BorderBrush="#C77800" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1,0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,628,0,0" Foreground="Black" FontFamily="Lato" FontSize="40" Width="129" Height="52">
+            <TextBox.ToolTip>
+                <ToolTip Content="Enter the coefficient, which&#xD;&#xA;will be used during scaling" FontFamily="Lato" FontSize="16" Width="Auto" Height="Auto" Placement="Top" Background="#FFFFD95B" Foreground="Black">
+                </ToolTip>
+            </TextBox.ToolTip>
+        </TextBox>
 
         <Rectangle Fill="#FFFFFF" Stroke="#C77800" StrokeThickness="1" Height="698" Width="949" VerticalAlignment="Top" Margin="410,137,0,0" />
 
@@ -90,7 +131,7 @@
 
         <oxy:PlotView VerticalAlignment="Top" HorizontalAlignment="Left" Width="950" Height="698" Margin="450,137,0,0" x:Name="AffineImage" Background="#FFFFE89B"></oxy:PlotView>
 
-        <Label Content="Scope: " FontFamily="Lato" x:Name="ScaleLabel" FontSize="20" FontWeight="Bold" Margin="514,181,0,0" Width="170" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
-
+        <Label Content="Scope: " FontFamily="Lato" x:Name="ScaleLabel" FontSize="20" FontWeight="Bold" Margin="514,181,0,0" Width="600" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+       
     </Grid>
 </Page>

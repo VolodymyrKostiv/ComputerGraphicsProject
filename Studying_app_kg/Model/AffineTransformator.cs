@@ -14,19 +14,36 @@ namespace Studying_app_kg.Model
 {
     class AffineTransformator
     {
-        private const double radians = 0.1; //nearly 6 degrees
+        const double radians = 0.1; //nearly 6 degrees
 
-        public double[,] Transform(double[,] inputParallelogram, double scale, Point vertex)
+        //public double[,] Transform(double[,] inputParallelogram, double scale, Point vertex)
+        //{
+        //    var parallelogramAtCenter = MatrixMultiplication(inputParallelogram, ReturnMoveTransformationMatrix(vertex.X, vertex.Y));
+        //    var turnedParallelogramAtCenter = MatrixMultiplication(parallelogramAtCenter, ReturnTurnTransformationMatrix(radians));
+        //    var backPositionTurnedParallelogram = MatrixMultiplication(turnedParallelogramAtCenter, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
+
+        //    var parallelogramOnCenter = MatrixMultiplication(backPositionTurnedParallelogram, ReturnMoveTransformationMatrix(vertex.X, vertex.Y));
+        //    var centerScaledParallelogram = MatrixMultiplication(parallelogramOnCenter, ReturnScopeTransformationMatrix(1 - (scale / 180)));
+        //    var backPositioScaledParallelogram = MatrixMultiplication(centerScaledParallelogram, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
+
+        //    return backPositioScaledParallelogram;
+        //}
+
+        public double[,] Transform(double[,] input, double scale, Point vertex)
         {
-            var parallelogramAtCenter = MatrixMultiplication(inputParallelogram, ReturnMoveTransformationMatrix(vertex.X, vertex.Y));
-            var turnedParallelogramAtCenter = MatrixMultiplication(parallelogramAtCenter, ReturnTurnTransformationMatrix(radians));
-            var backPositionTurnedParallelogram = MatrixMultiplication(turnedParallelogramAtCenter, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
+            return MatrixMultiplication(input, ReturnTransformationMatrix(input, scale, vertex));
+        }
 
-            var parallelogramOnCenter = MatrixMultiplication(backPositionTurnedParallelogram, ReturnMoveTransformationMatrix(vertex.X, vertex.Y));
-            var centerScaledParallelogram = MatrixMultiplication(parallelogramOnCenter, ReturnScopeTransformationMatrix(1 - (scale / 180)));
-            var backPositioScaledParallelogram = MatrixMultiplication(centerScaledParallelogram, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
+        public double[,] ReturnTransformationMatrix(double[,] input, double scale, Point vertex)
+        {
+            double[,] transformer = ReturnMoveTransformationMatrix(vertex.X, vertex.Y);
+            transformer = MatrixMultiplication(transformer, ReturnTurnTransformationMatrix(radians));
+            transformer = MatrixMultiplication(transformer, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
+            transformer = MatrixMultiplication(transformer, ReturnMoveTransformationMatrix(vertex.X, vertex.Y));
+            transformer = MatrixMultiplication(transformer, ReturnScopeTransformationMatrix(1 - (scale / 180)));
+            transformer = MatrixMultiplication(transformer, ReturnReversedMoveTransformationMatrix(vertex.X, vertex.Y));
 
-            return backPositioScaledParallelogram;
+            return transformer;
         }
 
         public double[,] ReturnTurnTransformationMatrix(double a)

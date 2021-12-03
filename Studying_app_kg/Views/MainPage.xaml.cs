@@ -12,6 +12,7 @@ namespace Studying_app_kg.Views
         {
             InitializeComponent();
         }
+
         private void FractalsChapter_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new FractalsPage(this));

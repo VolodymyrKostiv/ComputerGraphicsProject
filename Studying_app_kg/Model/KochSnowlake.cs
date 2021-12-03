@@ -75,6 +75,8 @@ namespace Studying_app_kg.Model
                     padding = 250;
                 else if (scope <= -2)
                     padding = 300;
+                else if (scope == 0)
+                    padding = 200;
 
                 double side = FractalCanvas.Height - (padding * 2);
 
