@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
       xmlns:local="clr-namespace:Studying_app_kg"
       xmlns:oxy="http://oxyplot.org/wpf"
       mc:Ignorable="d" 
@@ -11,7 +12,6 @@
 
     <Grid>
         <Rectangle Fill="#FFF6FBE7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1440" Height="1024"/>
-
 
         <Image MouseLeftButtonDown="Home_OnClick" Source="../Images/left-arrow.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="53" Margin="72,40,0,0" />
         <Label Content="Figure's movement" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="123,36,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFC77800" FontFamily="Lato" FontSize="52" Width="469" Height="72" />
@@ -132,6 +132,14 @@
         <oxy:PlotView VerticalAlignment="Top" HorizontalAlignment="Left" Width="950" Height="698" Margin="450,137,0,0" x:Name="AffineImage" Background="#FFFFE89B"></oxy:PlotView>
 
         <Label Content="Scope: " FontFamily="Lato" x:Name="ScaleLabel" FontSize="20" FontWeight="Bold" Margin="514,181,0,0" Width="600" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
-       
+
+        <!--<HamburgerMenu:HamburgerMenu  Background="#FFFFE89B" MenuIconColor="#FFFFA726" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"  Width="69" Margin="10,0,0,0">
+            <HamburgerMenu:HamburgerMenuItem Icon="../Images/color.png" Text="Home" />
+            <HamburgerMenu:HamburgerMenuItem Icon="../Images/color.png" Text="Search"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="../Images/color.png" Text="Likes"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="../Images/color.png" Text="Lists"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="../Images/color.png" Text="Profile"/>
+        </HamburgerMenu:HamburgerMenu>-->
+
     </Grid>
 </Page>
